@@ -14,8 +14,58 @@
       <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
           <dict>
               <key>NSAllowsArbitraryLoads</key>
-              <true/>
+              <false/>
+              <key>NSExceptionDomains</key>
+              <dict>
+                  <key>facebook.com</key>
+                  <dict>
+                      <key>NSIncludesSubdomains</key>
+                      <true/>
+                      <key>NSExceptionRequiresForwardSecrecy</key>
+                      <false/>
+                  </dict>
+                  <key>fbcdn.net</key>
+                  <dict>
+                      <key>NSIncludesSubdomains</key>
+                      <true/>
+                      <key>NSExceptionRequiresForwardSecrecy</key>
+                      <false/>
+                  </dict>
+                  <key>akamaihd.net</key>
+                  <dict>
+                      <key>NSIncludesSubdomains</key>
+                      <true/>
+                      <key>NSExceptionRequiresForwardSecrecy</key>
+                      <false/>
+                  </dict>
+                  <key>localhost</key>
+                  <dict>
+                      <key>NSIncludesSubdomains</key>
+                      <true/>
+                      <key>NSExceptionRequiresForwardSecrecy</key>
+                      <false/>
+                  </dict>
+                  <key>dev-uk03.idasnetwork.com</key>
+                  <dict>
+                      <key>NSIncludesSubdomains</key>
+                      <true/>
+                      <key>NSExceptionRequiresForwardSecrecy</key>
+                      <false/>
+                  </dict>
+                  <key>udp01-aws.idasnetwork.com</key>
+                  <dict>
+                      <key>NSIncludesSubdomains</key>
+                      <true/>
+                      <key>NSExceptionRequiresForwardSecrecy</key>
+                      <false/>
+                  </dict>
+              </dict>
           </dict>
+      </config-file>
+      <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+          <array>
+              <string>fbauth</string>
+          </array>
       </config-file>
     </platform>
 </plugin>
